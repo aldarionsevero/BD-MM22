@@ -29,16 +29,16 @@ VALUES ('HNO1268','215565723',03);
 -- Manutencoes
 
 INSERT INTO Manutencao (idManutencao,DataManutencao,Descricao,Valor,CNH,idFrete,Placa)
-VALUES ('01','2015-02-22','Pneu Furado',20.50,'046052702',01,'HJQ5268');
+VALUES (01,'2015-02-22','Pneu Furado',20.50,'046052702',01,'HJQ5268');
 
 
+-- Materiais
 
+INSERT INTO Material (idMaterial,Nome,ValorMaterial,TipoMaterial,idFrete)
+VALUES (01,'Cobalto',10.23,'Minerio',01);
 
--- CREATE TABLE Frete(
---   idFrete Integer NOT NULL,
---   Efetivacao Date,
---   PtDescarga Char(30),
---   Producao Double,
---   ValorFrete Double
--- )
--- ;
+INSERT INTO Material (idMaterial,Nome,ValorMaterial,TipoMaterial,idFrete)
+VALUES (02,'Impureza',0,'Esterio',02);
+
+INSERT INTO Material (idMaterial,Nome,ValorMaterial,TipoMaterial,idFrete)
+VALUES (03,'Ouro',25.69,'Minerio',03);
