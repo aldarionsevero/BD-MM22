@@ -1,45 +1,57 @@
 
-\section{Dicionario de Dados} % (fold)
-\label{sec:dicionario_de_dados}
 
-% section dicionario_de_dados (end)
+% \section{Diagrama Entidade-Relacionamento [DER]} % (fold)
+% \label{sec:diagrama_entidade_relacionamento}
 
-\begin{table}[htbp]
-\caption{}
-\begin{tabular}{|l|l|l|c|c|c|}
-\hline
-\textbf{Entidade} & \textbf{Atributo} & \textbf{Tipo} & \textbf{PK} & \textbf{UK} & \textbf{FK} \\ \hline
-Motorista & CNH & Integer & x & x &  \\ \hline
-Motorista & Nome & Varchar &  &  &  \\ \hline
-Motorista & CPF & Varchar &  &  &  \\ \hline
-Motorista & RG & Varchar &  &  &  \\ \hline
-Motorista & Pai & Varchar &  &  &  \\ \hline
-Motorista & Mae & Varchar &  &  &  \\ \hline
-Motorista & Sexo & Varchar &  &  &  \\ \hline
-Motorista & Est\_Civil & Varchar &  &  &  \\ \hline
-Motorista & Naturalidade & Varchar &  &  &  \\ \hline
-Motorista & Endereco & Varchar &  &  &  \\ \hline
-Motorista & Telefone & Varchar &  &  &  \\ \hline
-Motorista & Email & Varchar &  &  &  \\ \hline
-Motorista & Escolaridade & Varchar &  &  &  \\ \hline
-Motorista & Cargo & Varchar &  &  &  \\ \hline
-Caminhao & Placa & Integer & x & x &  \\ \hline
-Caminhao & idApontamento & Integer &  &  & x \\ \hline
-Manutencao & idManutencao & Integer & x &  &  \\ \hline
-Manutencao & Data & Date &  &  &  \\ \hline
-Manutencao & Descricao & Varchar &  &  &  \\ \hline
-Manutencao & Valor & Double &  &  &  \\ \hline
-Manutencao & idApontamento & Integer &  &  & x \\ \hline
-Manutencao & Placa & Integer &  &  & x \\ \hline
-Apontamento\_Producao & idApontamento & Integer & x &  &  \\ \hline
-Apontamento\_Producao & Efetivacao & Date &  &  &  \\ \hline
-Apontamento\_Producao & Pt\_Descarga & Varchar &  &  &  \\ \hline
-Apontamento\_Producao & Producao & Double &  &  &  \\ \hline
-Material & idMaterial & Integer & x &  &  \\ \hline
-Material & Nome & Varchar &  &  &  \\ \hline
-Material & Valor & Double &  &  &  \\ \hline
-Material & Classe & Varchar &  &  &  \\ \hline
-Material & idApontamento & Integer &  &  & x \\ \hline
-\end{tabular}
-\label{}
-\end{table}
+% \begin{figure}[h]
+%   \begin{center}
+%     \includegraphics[width=1\textwidth]{conteudo/der}
+%     \caption{Diagrama Entidade-Relacionamento}
+%   \end{center}
+% \end{figure}
+% % section diagrama_entidade_relacionamento (end)
+
+% \newpage
+% \section{Modelo Entidade-Relacionamento [MER]} % (fold)
+% \label{sec:modelo_entidade_relacionamento}
+
+% \begin{figure}[h]
+%   \begin{center}
+%     \includegraphics[width=0.8\textwidth]{conteudo/mer}
+%     \caption{Modelo Entidade-Relacionamento}
+%   \end{center}
+% \end{figure}
+% % section modelo_entidade_relacionamento (end)
+
+
+% \section{Dicionário de Dados} % (fold)
+% \label{sec:dicionario_de_dados}
+
+\textbf{Entidade Motorista} : Esta entidade armazena todos os motoristas com seus respectivos dados.
+
+\begin{longtable}{p{2cm}>{\centering\arraybackslash}p{1cm}>{\centering\arraybackslash}p{1.2cm}>{\centering\arraybackslash}p{2.5cm}>{\centering\arraybackslash}p{2cm}m{3.5cm}}
+\caption{Entidade: Motorista}\\
+\toprule
+Nome & Tipo & Tamanho  & Restrições de Domínio & Regra de Derivação & Observações \\ \midrule
+\rowcolor[gray]{0.9}
+CNH & Integer & 11 & - & - & Campo que armazena o número da CNH \\ 
+Nome & Char & 30 & - & - & Campo que armazena o nome do motorista \\ 
+\rowcolor[gray]{0.9}
+CPF & Char & 20 & Somente números & - & Campo que armazena o número do CPF \\ 
+RG & Char & 20 & Somente números & - & Campo que armazena o número de RG \\ 
+\rowcolor[gray]{0.9}
+Pai & Char & 20 & - & - & Campo que armazena o nome do pai do motorista \\ 
+Mae & Char & 20 & - & - & Campo que armazena o nome da mãe do motorista \\ 
+\rowcolor[gray]{0.9}
+Sexo & Char & 20 & - & - & Campo que armazena o sexo do motorista \\ 
+EstCivil & Char & 10 & - & - & Campo que armazena o estado civil do motorista \\ 
+\rowcolor[gray]{0.9}
+Naturalidade & Char & 20 & - & - & Campo que armazena a naturalidade do motorista \\ 
+Endereco & Char & 70 & - & - & Campo que armazena o endereço do motorista \\ 
+\rowcolor[gray]{0.9}
+Telefone & Char & 10 & Somente números & - & Campo que armazena o telefone de contato do motorista \\ 
+Email & Char & 15 & - & - & Campo que armazena o e-maildo motorista  \\ 
+\rowcolor[gray]{0.9}
+Escolaridade & Char & 20 & - & - & Campo que armazena o nível de escolaridade do motorista \\ 
+Cargo & Char & 20 & - & - & Campo que armazena o cargo do motorista \\ \bottomrule
+\end{longtable}
