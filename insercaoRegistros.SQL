@@ -23,25 +23,25 @@ VALUES (03,'2015-06-06','Rio de Janeiro',33.1,19.35);
 
 -- Caminhoes
 
-INSERT INTO Caminhao (Placa,CNH,idFrete)
-VALUES ('HJQ5268','046052702',01);
+INSERT INTO Caminhao (Chassi,CNH,idFrete)
+VALUES (5268,'046052702',01);
 
-INSERT INTO Caminhao (Placa,CNH,idFrete)
-VALUES ('HJU5248','241062010',02);
+INSERT INTO Caminhao (Chassi,CNH,idFrete)
+VALUES (5248,'241062010',02);
 
-INSERT INTO Caminhao (Placa,CNH,idFrete)
-VALUES ('HNO1268','215565723',03);
+INSERT INTO Caminhao (Chassi,CNH,idFrete)
+VALUES (1268,'215565723',03);
 
 -- Manutencoes
 
-INSERT INTO Manutencao (idManutencao,DataManutencao,Descricao,Valor,CNH,idFrete,Placa)
-VALUES (01,'2015-02-22','Pneu Furado',20.50,'046052702',02,'HJQ5268');
+INSERT INTO Manutencao (idManutencao,DataManutencao,Descricao,Valor,CNH,idFrete,Chassi)
+VALUES (01,'2015-02-22','Pneu Furado',20.50,'046052702',02,5268);
 
-INSERT INTO Manutencao (idManutencao,DataManutencao,Descricao,Valor,CNH,idFrete,Placa)
-VALUES (02,'2015-01-11','Vidro Quebrado',120.50,'019872784',01,'HJQ5268');
+INSERT INTO Manutencao (idManutencao,DataManutencao,Descricao,Valor,CNH,idFrete,Chassi)
+VALUES (02,'2015-01-11','Vidro Quebrado',120.50,'019872784',01,5268);
 
-INSERT INTO Manutencao (idManutencao,DataManutencao,Descricao,Valor,CNH,idFrete,Placa)
-VALUES (03,'2015-01-11','Troca de Para-choque',500.00,'019872784',01,'HJQ5268');
+INSERT INTO Manutencao (idManutencao,DataManutencao,Descricao,Valor,CNH,idFrete,Chassi)
+VALUES (03,'2015-01-11','Troca de Para-choque',500.00,'019872784',01,5268);
 
 
 -- Materiais

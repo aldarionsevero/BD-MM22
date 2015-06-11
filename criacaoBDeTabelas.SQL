@@ -39,7 +39,7 @@ ALTER TABLE Motorista ADD CONSTRAINT Key1 PRIMARY KEY (CNH)
 -- Table Caminhao
 
 CREATE TABLE Caminhao(
-  Placa Char(8) NOT NULL,
+  Chassi Integer NOT NULL,
   CNH Integer NOT NULL,
   idFrete Integer NOT NULL
 )
@@ -47,7 +47,7 @@ CREATE TABLE Caminhao(
 
 -- Add keys for table Caminhao
 
-ALTER TABLE Caminhao ADD CONSTRAINT Key2 PRIMARY KEY (CNH,idFrete,Placa)
+ALTER TABLE Caminhao ADD CONSTRAINT Key2 PRIMARY KEY (CNH,idFrete,Chassi)
 ;
 
 -- Table Manutencao
@@ -59,13 +59,13 @@ CREATE TABLE Manutencao(
   Valor Double,
   CNH Integer NOT NULL,
   idFrete Integer NOT NULL,
-  Placa Integer NOT NULL
+  Chassi Integer NOT NULL
 )
 ;
 
 -- Add keys for table Manutencao
 
-ALTER TABLE Manutencao ADD CONSTRAINT Key3 PRIMARY KEY (idManutencao,CNH,idFrete,Placa)
+ALTER TABLE Manutencao ADD CONSTRAINT Key3 PRIMARY KEY (idManutencao,CNH,idFrete,Chassi)
 ;
 
 -- Table Frete
@@ -111,6 +111,6 @@ ALTER TABLE Caminhao ADD CONSTRAINT Realiza FOREIGN KEY (idFrete) REFERENCES Fre
 ALTER TABLE Material ADD CONSTRAINT Comporta FOREIGN KEY (idFrete) REFERENCES Frete (idFrete)
 ;
 
-ALTER TABLE Manutencao ADD CONSTRAINT Recebe FOREIGN KEY (CNH, idFrete, Placa) REFERENCES Caminhao (CNH, idFrete, Placa)
+ALTER TABLE Manutencao ADD CONSTRAINT Recebe FOREIGN KEY (CNH, idFrete, Chassi) REFERENCES Caminhao (CNH, idFrete, Chassi)
 ;
 
