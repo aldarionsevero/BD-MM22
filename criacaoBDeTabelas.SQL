@@ -87,8 +87,8 @@ ALTER TABLE Frete ADD CONSTRAINT Key4 PRIMARY KEY (idFrete)
 -- Table Material
 
 CREATE TABLE Material(
-  idMaterial Char(1) NOT NULL,
-  Nome Integer NOT NULL,
+  idMaterial Integer NOT NULL,
+  Nome Char(30) NOT NULL,
   ValorMaterial Double,
   TipoMaterial Char(10),
   idFrete Integer NOT NULL
