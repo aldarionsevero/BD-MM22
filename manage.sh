@@ -36,5 +36,5 @@ Bancos e tabelas existentes"
 mysql -u root --password=1234 -e "show databases";
 mysql -u root --password=1234  MM22 -e "show tables";
 
-
+mysql -u root --password=1234 MM22 < insercaoRegistros.SQL
 showData "Motorista"
