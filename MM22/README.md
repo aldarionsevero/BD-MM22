@@ -16,4 +16,6 @@ O MER e DER referentes ás entidades e relações investigadas para essa base de
 
 O repositório pode ser acessado no seguinte link:
 
-https://github.com/aldarionsevero/BD-MM22
+Scripts SQL: https://github.com/aldarionsevero/BD-MM22/tree/master/MM22
+
+Raiz: https://github.com/aldarionsevero/BD-MM22
