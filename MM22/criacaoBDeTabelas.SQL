@@ -106,6 +106,3 @@ ALTER TABLE Caminhao ADD CONSTRAINT Realiza FOREIGN KEY (idFrete) REFERENCES Fre
 ALTER TABLE Material ADD CONSTRAINT Comporta FOREIGN KEY (idFrete) REFERENCES Frete (idFrete)
 ;
 
-ALTER TABLE Manutencao ADD CONSTRAINT Recebe FOREIGN KEY (CNH, idFrete, Chassi) REFERENCES Caminhao (CNH, idFrete, Chassi)
-;
-
