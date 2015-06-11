@@ -1,0 +1,45 @@
+
+\section{Dicionario de Dados} % (fold)
+\label{sec:dicionario_de_dados}
+
+% section dicionario_de_dados (end)
+
+\begin{table}[htbp]
+\caption{}
+\begin{tabular}{|l|l|l|c|c|c|}
+\hline
+\textbf{Entidade} & \textbf{Atributo} & \textbf{Tipo} & \textbf{PK} & \textbf{UK} & \textbf{FK} \\ \hline
+Motorista & CNH & Integer & x & x &  \\ \hline
+Motorista & Nome & Varchar &  &  &  \\ \hline
+Motorista & CPF & Varchar &  &  &  \\ \hline
+Motorista & RG & Varchar &  &  &  \\ \hline
+Motorista & Pai & Varchar &  &  &  \\ \hline
+Motorista & Mae & Varchar &  &  &  \\ \hline
+Motorista & Sexo & Varchar &  &  &  \\ \hline
+Motorista & Est\_Civil & Varchar &  &  &  \\ \hline
+Motorista & Naturalidade & Varchar &  &  &  \\ \hline
+Motorista & Endereco & Varchar &  &  &  \\ \hline
+Motorista & Telefone & Varchar &  &  &  \\ \hline
+Motorista & Email & Varchar &  &  &  \\ \hline
+Motorista & Escolaridade & Varchar &  &  &  \\ \hline
+Motorista & Cargo & Varchar &  &  &  \\ \hline
+Caminhao & Placa & Integer & x & x &  \\ \hline
+Caminhao & idApontamento & Integer &  &  & x \\ \hline
+Manutencao & idManutencao & Integer & x &  &  \\ \hline
+Manutencao & Data & Date &  &  &  \\ \hline
+Manutencao & Descricao & Varchar &  &  &  \\ \hline
+Manutencao & Valor & Double &  &  &  \\ \hline
+Manutencao & idApontamento & Integer &  &  & x \\ \hline
+Manutencao & Placa & Integer &  &  & x \\ \hline
+Apontamento\_Producao & idApontamento & Integer & x &  &  \\ \hline
+Apontamento\_Producao & Efetivacao & Date &  &  &  \\ \hline
+Apontamento\_Producao & Pt\_Descarga & Varchar &  &  &  \\ \hline
+Apontamento\_Producao & Producao & Double &  &  &  \\ \hline
+Material & idMaterial & Integer & x &  &  \\ \hline
+Material & Nome & Varchar &  &  &  \\ \hline
+Material & Valor & Double &  &  &  \\ \hline
+Material & Classe & Varchar &  &  &  \\ \hline
+Material & idApontamento & Integer &  &  & x \\ \hline
+\end{tabular}
+\label{}
+\end{table}
