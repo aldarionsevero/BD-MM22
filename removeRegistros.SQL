@@ -1,0 +1,9 @@
+
+ALTER TABLE Motorista 
+DROP COLUMN Pai;
+
+DELETE FROM Caminhao
+WHERE Chassi=5268 AND CNH='046052702';
+
+DELETE FROM Motorista
+WHERE RG=2403322 AND Sexo='Masculino';
