@@ -6,7 +6,6 @@ Modified: 11/06/2015
 
 -- Create database section -----------------------------------------------
 
-DROP DATABASE MM22;
 CREATE DATABASE MM22;
 USE MM22;
 
