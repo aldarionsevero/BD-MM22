@@ -1,6 +1,6 @@
 -- alteracao
 
---motoristas
+-- motoristas
 
 UPDATE Motorista
 SET Endereco='SQN 408 alterado', Email='john@alterado.com', Cargo='gerente (alterado)'
@@ -28,7 +28,7 @@ WHERE Chassi=5268; -- altera dono do caminhao
 
 UPDATE Caminhao
 SET CNH='241062010'
-WHERE CNH=5248;
+WHERE Chassi=5248;
 
 -- Manutencoes
 
