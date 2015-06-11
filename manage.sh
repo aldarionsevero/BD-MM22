@@ -39,8 +39,9 @@ for i in `mysql -u root --password=1234  MM22 -e "show tables"`;  do
 done
 
 echo "\
-
-Populando tabelas"
+======================
+Populando tabelas
+======================"
 mysql -u root --password=1234 MM22 < insercaoRegistros.SQL
 for i in `mysql -u root --password=1234  MM22 -e "show tables"`;  do
 	showData $i
@@ -48,8 +49,9 @@ for i in `mysql -u root --password=1234  MM22 -e "show tables"`;  do
 done
 
 echo "\
-
-Alterando dados nas tabelas"
+======================
+Alterando dados nas tabelas
+======================"
 mysql -u root --password=1234 MM22 < alteracaoRegistros.SQL
 for i in `mysql -u root --password=1234  MM22 -e "show tables"`;  do
 	showData $i
@@ -59,8 +61,9 @@ done
 
 
 echo "\
-
-Removendo alguns dados/campos"
+======================
+Removendo alguns dados/campos
+======================"
 mysql -u root --password=1234 MM22 < removeRegistros.SQL
 for i in `mysql -u root --password=1234  MM22 -e "show tables"`;  do
 	showData $i
@@ -68,6 +71,7 @@ for i in `mysql -u root --password=1234  MM22 -e "show tables"`;  do
 done
 
 echo "\
-
-Apresentando uma busca especifica (nome dos motoristas cadastrados)"
+======================
+Apresentando uma busca especifica (nome dos motoristas cadastrados)
+======================"
 mysql -u root --password=1234 MM22 < recuperacaoRegistros.SQL
