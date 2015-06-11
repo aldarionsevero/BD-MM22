@@ -1,11 +1,11 @@
 ﻿/*
+MODEL: MYSQL
 Created: 27/05/2015
 Modified: 11/06/2015
-Model: DB2 UDB v.8 (LUW)
-Database: DB2 UDB v.8 (LUW)
 */
 
-DROP DATABASE MM22;
+-- Create database section -----------------------------------------------
+
 CREATE DATABASE MM22;
 USE MM22;
 
@@ -113,7 +113,4 @@ ALTER TABLE Material ADD CONSTRAINT Comporta FOREIGN KEY (idFrete) REFERENCES Fr
 
 ALTER TABLE Manutencao ADD CONSTRAINT Recebe FOREIGN KEY (CNH, idFrete, Placa) REFERENCES Caminhao (CNH, idFrete, Placa)
 ;
-
-
-
 
