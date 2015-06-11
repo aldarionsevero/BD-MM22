@@ -34,7 +34,12 @@ echo "\
 
 Bancos e tabelas existentes"
 mysql -u root --password=1234 -e "show databases";
-mysql -u root --password=1234  MM22 -e "show tables";
+for i in `mysql -u root --password=1234  MM22 -e "show tables"`;  do
+	echo $i
+done
 
 mysql -u root --password=1234 MM22 < insercaoRegistros.SQL
-showData "Motorista"
+for i in `mysql -u root --password=1234  MM22 -e "show tables"`;  do
+	showData $i
+	echo '---'
+done
