@@ -35,7 +35,7 @@ VALUES (1268,'215565723',03);
 -- Manutencoes
 
 INSERT INTO Manutencao (idManutencao,DataManutencao,Descricao,Valor,CNH,idFrete,Chassi)
-VALUES (01,'2015-02-22','Pneu Furado',20.50,'046052702',02,5268);
+VALUES (01,'2015-02-22','Pneu Furado',20.50,'046052702',02,5248);
 
 INSERT INTO Manutencao (idManutencao,DataManutencao,Descricao,Valor,CNH,idFrete,Chassi)
 VALUES (02,'2015-01-11','Vidro Quebrado',120.50,'019872784',01,5268);
