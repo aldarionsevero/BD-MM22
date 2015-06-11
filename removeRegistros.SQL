@@ -3,7 +3,14 @@ ALTER TABLE Motorista
 DROP COLUMN Pai;
 
 DELETE FROM Caminhao
-WHERE Chassi=5268 AND CNH='046052702';
+WHERE Chassi=5268 AND CNH='215565723';
 
-DELETE FROM Motorista
-WHERE RG=2403322 AND Sexo='Masculino';
+
+DELETE FROM Manutencao
+WHERE CNH='19872784';
+
+DELETE FROM Material
+WHERE TipoMaterial='Minerio';
+
+DELETE FROM Frete
+WHERE idFrete=1;

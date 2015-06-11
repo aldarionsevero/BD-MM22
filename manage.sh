@@ -49,6 +49,17 @@ done
 
 echo "\
 
+Alterando dados nas tabelas"
+mysql -u root --password=1234 MM22 < alteracaoRegistros.SQL
+for i in `mysql -u root --password=1234  MM22 -e "show tables"`;  do
+	showData $i
+	echo '---'
+done
+
+
+
+echo "\
+
 Removendo alguns dados/campos"
 mysql -u root --password=1234 MM22 < removeRegistros.SQL
 for i in `mysql -u root --password=1234  MM22 -e "show tables"`;  do
