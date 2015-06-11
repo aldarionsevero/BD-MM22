@@ -32,10 +32,15 @@ mysql -u root --password=1234 < criacaoBDeTabelas.SQL
 
 echo "\
 
-Bancos e tabelas existentes"
+Bancos existentes"
 mysql -u root --password=1234 -e "show databases";
+echo "\
+
+Tabelas existentes"
 for i in `mysql -u root --password=1234  MM22 -e "show tables"`;  do
-	echo $i
+	if [[ $i != "Tables_in_MM22" ]]; then
+		echo $i
+	fi
 done
 
 echo "\
@@ -44,8 +49,10 @@ Populando tabelas
 ======================"
 mysql -u root --password=1234 MM22 < insercaoRegistros.SQL
 for i in `mysql -u root --password=1234  MM22 -e "show tables"`;  do
-	showData $i
-	echo '---'
+	if [[ $i != "Tables_in_MM22" ]]; then
+		showData $i
+		echo '---'
+	fi
 done
 
 echo "\
@@ -54,8 +61,10 @@ Alterando dados nas tabelas
 ======================"
 mysql -u root --password=1234 MM22 < alteracaoRegistros.SQL
 for i in `mysql -u root --password=1234  MM22 -e "show tables"`;  do
-	showData $i
-	echo '---'
+	if [[ $i != "Tables_in_MM22" ]]; then
+		showData $i
+		echo '---'
+	fi
 done
 
 
@@ -66,8 +75,10 @@ Removendo alguns dados/campos
 ======================"
 mysql -u root --password=1234 MM22 < removeRegistros.SQL
 for i in `mysql -u root --password=1234  MM22 -e "show tables"`;  do
-	showData $i
-	echo '---'
+	if [[ $i != "Tables_in_MM22" ]]; then
+		showData $i
+		echo '---'
+	fi
 done
 
 echo "\
