@@ -1,6 +1,15 @@
 #!/bin/bash
 
 
+function showData
+{
+
+echo "\
+
+Dados em $1"
+mysql -u root --password=1234 MM22 -e "select * from $1";
+}
+
 echo "\
 
 Bancos existentes"
@@ -26,3 +35,6 @@ echo "\
 Bancos e tabelas existentes"
 mysql -u root --password=1234 -e "show databases";
 mysql -u root --password=1234  MM22 -e "show tables";
+
+mysql -u root --password=1234 MM22 < insercaoRegistros.SQL
+showData "Motorista"
