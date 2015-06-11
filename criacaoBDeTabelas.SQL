@@ -39,7 +39,7 @@ ALTER TABLE Motorista ADD CONSTRAINT Key1 PRIMARY KEY (CNH)
 -- Table Caminhao
 
 CREATE TABLE Caminhao(
-  Placa Integer NOT NULL,
+  Placa Char(8) NOT NULL,
   CNH Integer NOT NULL,
   idFrete Integer NOT NULL
 )
